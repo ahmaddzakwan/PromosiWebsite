@@ -1,0 +1,350 @@
+:root {
+  --black: #070f2b;
+  --darkPurple: #1b1a55;
+  --Purple: #535c91;
+  --lavender: #9290c3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: var(--darkPurple);
+  font-family: "poppins", sans-serif;
+}
+
+.navbar {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  background-color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 8px;
+}
+
+.navbar .navbar-logo img {
+  width: 200px;
+  height: 100px;
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--lavender);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid var(--lavender);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+main .home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/cinema-date.jpg);
+  background-size: cover;
+  border: 1px solid var(--black);
+}
+
+main .about {
+  display: flex;
+  margin-top: 10rem;
+  justify-content: space-between;
+}
+
+main .about img {
+  width: 600px;
+  height: 350px;
+  border: 1px solid gray;
+  box-shadow: 0 0 20px gray;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+main .about .content {
+  margin: 0 5rem;
+  align-items: center;
+}
+
+main .about .content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+}
+
+main .about .content p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: var(--Purple);
+}
+
+main .now {
+  display: flex;
+  margin-top: 10rem;
+  padding: 5rem;
+  background-color: var(--black);
+}
+
+main .now img {
+  width: 500px;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+}
+
+main .now .content {
+  margin: 0 4rem;
+  line-height: 8rem;
+}
+
+main .now .content h1 {
+  font-size: 2.8rem;
+  color: #9290c3;
+  text-shadow: 0 0 3px #fff;
+}
+
+main .now .content h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+main .now .content h3 span {
+  color: var(--Purple);
+  text-shadow: 0 0 2px var(--lavender);
+}
+
+main .tambahan {
+  margin-top: 10rem;
+}
+
+main .tambahan h1 {
+  text-align: center;
+}
+
+main .tambahan .list {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+main .tambahan .list .card1 {
+  border-radius: 25px;
+  margin: 4rem;
+  padding: 50px;
+  box-shadow: 0 0 10px darkgray;
+  transition: 0.2s linear;
+}
+
+main .tambahan .list .card1 img {
+    width: 300px;
+}
+
+main .tambahan .list .card {
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 0 10px darkgrey;
+}
+
+main .tambahan .list .card img {
+    width: 300px;
+}
+
+footer {
+  margin-top: 10rem;
+  background-color: var(--darkPurple);
+  padding: 0.7rem;
+}
+
+footer .credit p {
+  text-align: center;
+  color: #fff;
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+}
+
+footer .credit p a {
+  text-decoration: none;
+  color: var(--lavender);
+  text-shadow: 0 0 10px var(--Purple);
+}
+
+/* media query */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    left: 0;
+    right: 0;
+    padding: 0 2rem;
+    justify-content: space-between;
+  }
+
+  .navbar .navbar-logo img {
+    width: 100px;
+    height: 50px;
+  }
+
+  .navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar .navbar-nav a {
+    font-size: 0.7rem;
+  }
+
+  main .home {
+    background-position: center;
+  }
+
+  main .about {
+    flex-direction: column-reverse;
+    margin-top: 3rem;
+  }
+
+  main .about .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2.5rem;
+    text-align: center;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+
+  main .about .content h1 {
+    font-size: 1.3rem;
+  }
+
+  main .about .content p {
+    font-size: 1.1rem;
+  }
+
+  main .about img {
+    width: 500px;
+    height: 250px;
+    margin-left: 5rem;
+    border-top-left-radius: 8px 8%;
+    border-bottom-left-radius: 8px 8%;
+  }
+
+  main .now {
+    padding: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main .now img {
+    width: 200px;
+    height: 300px;
+    margin-left: 3.5rem;
+  }
+
+  main .now .content {
+    display: flex;
+    margin: 2rem 0;
+    margin-left: 3.5rem;
+    line-height: 2rem;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  main .now .content h1 {
+    font-size: 1.3rem;
+  }
+
+  main .now .content h3 {
+    font-size: 1.1rem;
+  }
+
+  main .tambahan {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  main .tambahan h1 {
+    font-size: 1rem;
+  }
+
+  main .tambahan .list {
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    margin-top: 0.5rem;
+  }
+
+  main .tambahan .list .card1 {
+    margin-top: 2rem;
+  }
+
+  main .tambahan .list .card1 img {
+    width: 100px;
+  }
+
+  main .tambahan .list .card {
+    margin-left: 3rem;
+  }
+
+  main .tambahan .list .card img {
+    width: 200px;
+  }
+
+  footer {
+    margin-top: 2rem;
+    align-items: center;
+    padding: 0.7rem 0;
+  }
+
+  footer .credit {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .credit p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (width: 450px) {
+    html {
+        font-size: 62.5%;
+    }
+}
